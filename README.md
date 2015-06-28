@@ -1,2 +1,2 @@
-# fvim-vimrc
-vimrc config
+# fvim
+vim config with Node.js
