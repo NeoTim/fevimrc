@@ -18,8 +18,8 @@ set gfn=Monospace\ 10
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
-    set guifont=Menlo:h12
-    set transparency=7
+    set guifont=Menlo:h14
+    set transparency=6
   endif
 else
   let g:CSApprox_loaded = 1
@@ -57,3 +57,6 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
+
+
+
