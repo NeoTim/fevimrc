@@ -1,0 +1,256 @@
+" vim-airline
+let g:airline_theme = 'powerlineish'
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+if !exists('g:airline_powerline_fonts')
+  let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = '|'
+else
+  let g:airline#extensions#tabline#left_sep = ''
+  let g:airline#extensions#tabline#left_alt_sep = ''
+
+  " powerline symbols
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline_symbols.branch = ''
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.linenr = ''
+endif
+"*****************************************************************************
+"" Abbreviations
+"*****************************************************************************
+"" no one is really happy until you have this shortcuts
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
+
+"" NERDTree configuration
+let g:NERDTreeChDirMode=2
+let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
+let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
+let g:NERDTreeShowBookmarks=1
+let g:nerdtree_tabs_focus_on_files=1
+let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
+let g:NERDTreeWinSize = 20
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
+nnoremap <silent> <F2> :NERDTreeFind<CR>
+noremap <F3> :NERDTreeToggle<CR>
+
+" grep.vim
+nnoremap <silent> <leader>f :Rgrep<CR>
+let Grep_Default_Options = '-IR'
+
+" vimshell.vim
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+let g:vimshell_prompt =  '$ '
+
+" terminal emulation
+if g:vim_bootstrap_editor == 'nvim'
+  nnoremap <silent> <leader>sh :terminal<CR>
+else
+  nnoremap <silent> <leader>sh :VimShellCreate<CR>
+endif
+
+
+"" Git
+noremap <Leader>ga :Gwrite<CR>
+noremap <Leader>gc :Gcommit<CR>
+noremap <Leader>gsh :Gpush<CR>
+noremap <Leader>gll :Gpull<CR>
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gd :Gvdiff<CR>
+noremap <Leader>gr :Gremove<CR>
+
+"" ctrlp.vim
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|tox)$'
+let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore +"'"
+let g:ctrlp_use_caching = 0
+cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+noremap <leader>b :CtrlPBuffer<CR>
+let g:ctrlp_map = '<leader>e'
+let g:ctrlp_open_new_file = 'r'
+
+" snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsEditSplit="vertical"
+
+" syntastic
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_warning_symbol = '⚠'
+let g:syntastic_auto_loc_list=1
+let g:syntastic_aggregate_errors = 1
+
+
+"=====================================================
+" 插件设置
+"=====================================================
+
+"--------------ctrlp.vim--------------
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+"-----------emmet-------------
+
+let g:user_emmet_settings = {
+\  'php' : {
+\    'extends' : 'html',
+\    'filters' : 'c',
+\  },
+\  'xml' : {
+\    'extends' : 'html',
+\  },
+\  'haml' : {
+\    'extends' : 'html',
+\  },
+\}
+
+let g:user_emmet_expandabbr_key = '<c-e>' "设置为ctrl+e展开
+
+" -----------Tagbar -------------
+nmap tb :TagbarToggle<CR>
+vmap tb :TagbarToggle<CR>
+
+
+"-------------Projects---------------
+nmap <silent> pr <Plug>ToggleProject
+
+"-----------commentary-----------------
+nmap cc gcc
+vmap cc gcc
+autocmd FileType php set commentstring=//\ %s
+
+"--------------javascript-libraries-syntax.vim--------------
+let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,requirejs'
+
+"--------------csscomb-for-vim--------------
+nmap <Leader>c :CSScomb<cr>
+vmap <Leader>c :CSScomb<cr>
+
+" -----------JsBeautify -------------
+map <c-f> :call JsBeautify()<cr>
+" or
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+"-------------easymotion---------------
+let g:EasyMotion_leader_key='<Space>'
+
+
+
+"-------------UltiSnips---------------
+nmap <Leader>u :UltiSnipsEdit<cr>
+vmap <Leader>u :UltiSnipsEdit<cr>
+let g:UltiSnipsExpandTrigger="<Space><tab>"
+
+" ----------- neocomplete-------------
+inoremap <leader><TAB> <C-c>
+
+"Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return neocomplete#close_popup() . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplete#close_popup()
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+" Close popup by <Space>.
+"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+
+" For cursor moving in insert mode(Not recommended)
+"inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
+"inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
+"inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
+"inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
+" Or set this.
+"let g:neocomplete#enable_cursor_hold_i = 1
+" Or set this.
+"let g:neocomplete#enable_insert_char_pre = 1
+
+" AutoComplPop like behavior.
+"let g:neocomplete#enable_auto_select = 1
+
+" Shell like behavior(not recommended).
+"set completeopt+=longest
+"let g:neocomplete#enable_auto_select = 1
+"let g:neocomplete#disable_auto_complete = 1
+"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+" For perlomni.vim setting.
+" https://github.com/c9s/perlomni.vim
+let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
