@@ -1,9 +1,0 @@
-if has("gui_running")
-  if has("gui_mac") || has("gui_macvim")
-    "set guifont=Menlo:h14
-    set guifont=Monaco:h14
-    set transparency=6
-  endif
-endif
-
-autocmd BufWritePost *.js,*.html,*.css,*.scss :%s/\s\+$//e

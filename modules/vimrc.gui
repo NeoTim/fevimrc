@@ -58,5 +58,4 @@ if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
 
-
-
+autocmd BufWritePost *.js,*.html,*.css,*.scss :%s/\s\+$//e
