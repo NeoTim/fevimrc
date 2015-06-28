@@ -117,8 +117,8 @@ NeoBundle "pbrisbin/vim-syntax-shakespeare"
 
 
 "" Include user's extra bundle
-if filereadable(expand("~/.vimrc.local.bundles"))
-  source ~/.vimrc.local.bundles
+if filereadable(expand("~/fvim/.vimrc.local.bundles"))
+  source ~/fvim/.vimrc.local.bundles
 endif
 
 call neobundle#end()
@@ -498,6 +498,6 @@ autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc
 
 
 "" Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
+if filereadable(expand("~/fvim/.vimrc.local"))
+  source ~/fvim/.vimrc.local
 endif
