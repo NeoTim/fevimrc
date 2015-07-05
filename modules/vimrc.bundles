@@ -11,7 +11,6 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'shemerey/vim-project'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
@@ -37,6 +36,8 @@ NeoBundle 'xolox/vim-session'
 
 "" Color
 NeoBundle 'tomasr/molokai'
+NeoBundle 'altercation/vim-colors-solarized'
+
 
 
 "" auto complete && Snippets
@@ -63,6 +64,9 @@ NeoBundle 'csscomb/csscomb-for-vim'
 
 "" JavaScript
 NeoBundle 'maksimr/vim-jsbeautify'
+
+"" markdown
+NeoBundle 'suan/vim-instant-markdown'
 
 "" syntax
 NeoBundle 'sheerun/vim-polyglot'

@@ -108,6 +108,10 @@ let g:syntastic_aggregate_errors = 1
 " 插件设置
 "=====================================================
 
+
+"--------------vim-instant-markdown--------------
+set shell=bash\ -i
+
 "--------------ctrlp.vim--------------
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
