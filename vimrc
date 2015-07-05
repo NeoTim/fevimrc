@@ -30,6 +30,14 @@ if filereadable(expand("~/fvim/modules/vimrc.bundles.setting"))
 endif
 
 " Include user's local vim config
-if filereadable(expand("~/fvim/vimrc.local"))
-  source ~/fvim/vimrc.local
+if filereadable(expand("~/fvim/customize/vimrc.local"))
+  source ~/fvim/customize/vimrc.local
+endif
+
+if filereadable(expand("~/fvim/customize/vimrc.local.bundles"))
+  source ~/fvim/customize/vimrc.local.bundles
+endif
+
+if filereadable(expand("~/fvim/customize/vimrc.local.bundles.setting"))
+  source ~/fvim/customize/vimrc.local.bundles.setting
 endif

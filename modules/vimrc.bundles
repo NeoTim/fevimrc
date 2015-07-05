@@ -5,10 +5,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "" NeoBundle install packages
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'ctrlpvim/ctrlp.vim'
+
+NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'vim-scripts/grep.vim'
 NeoBundle 'vim-scripts/CSApprox'
 NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'shemerey/vim-project'
+NeoBundle 'mbbill/undotree'
+NeoBundle 'kshenoy/vim-signature'
+NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'majutsushi/tagbar'
@@ -41,7 +45,8 @@ NeoBundle 'altercation/vim-colors-solarized'
 
 
 "" auto complete && Snippets
-NeoBundle 'vim-scripts/AutoClose'
+" NeoBundle 'vim-scripts/AutoClose'
+NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
@@ -57,6 +62,7 @@ NeoBundle 'Yggdroot/indentLine'
  
 "" Html
 NeoBundle 'mattn/emmet-vim'''
+NeoBundle 'vim-scripts/HTML-AutoCloseTag'
 
 "" CSS
 NeoBundle 'csscomb/csscomb-for-vim'
