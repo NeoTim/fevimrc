@@ -7,7 +7,6 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 
 NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'vim-scripts/grep.vim'
 NeoBundle 'vim-scripts/CSApprox'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'mbbill/undotree'
@@ -45,7 +44,6 @@ NeoBundle 'altercation/vim-colors-solarized'
 
 
 "" auto complete && Snippets
-" NeoBundle 'vim-scripts/AutoClose'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'SirVer/ultisnips'
@@ -79,4 +77,10 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
+
+NeoBundle 'rking/ag.vim' 
+NeoBundle 'dyng/ctrlsf.vim' 
+NeoBundle 'terryma/vim-multiple-cursors' 
+
+
 
