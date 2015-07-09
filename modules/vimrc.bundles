@@ -75,6 +75,7 @@ NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'suan/vim-instant-markdown'
 
 "" syntax
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
