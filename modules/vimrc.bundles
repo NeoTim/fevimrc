@@ -1,47 +1,21 @@
 " Let NeoBundle manage NeoBundle
-" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"" NeoBundle install packages
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-
-NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'vim-scripts/CSApprox'
-NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'mbbill/undotree'
-NeoBundle 'kshenoy/vim-signature'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-if v:version > 702
-	NeoBundle 'Shougo/vimshell.vim'
-endif
-
-
+"" basic setting
+NeoBundle 'tpope/vim-sensible'
 
 "" gui
 NeoBundle 'bling/vim-airline'
-
-"" Vim-Session
-NeoBundle 'xolox/vim-misc'
-NeoBundle 'xolox/vim-session'
-
-
-"" Color
+NeoBundle 'vim-scripts/CSApprox'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'bronson/vim-trailing-whitespace'
 
-
+"" fast jump
+NeoBundle 'kshenoy/vim-signature'
+NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'majutsushi/tagbar'
 
 "" auto complete && Snippets
 NeoBundle 'jiangmiao/auto-pairs'
@@ -49,22 +23,20 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 
+"" file manager
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'scrooloose/nerdtree'
 
 "" git
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 
-
-NeoBundle 'easymotion/vim-easymotion'
-NeoBundle 'Yggdroot/indentLine'
- 
 "" Html
-NeoBundle 'mattn/emmet-vim'''
+NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-scripts/HTML-AutoCloseTag'
 
 "" CSS
 NeoBundle 'csscomb/csscomb-for-vim'
-
 
 "" JavaScript
 NeoBundle 'maksimr/vim-jsbeautify'
@@ -78,9 +50,24 @@ NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 
+
+"" coding helper
+NeoBundle 'mbbill/undotree'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'rking/ag.vim' 
 NeoBundle 'dyng/ctrlsf.vim' 
 NeoBundle 'terryma/vim-multiple-cursors' 
+NeoBundle 'terryma/vim-expand-region'
 
 
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+      \ 'build' : {
+      \     'windows' : 'tools\\update-dll-mingw',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 

@@ -1,6 +1,10 @@
 "=====================================================
 " Mappings
 "=====================================================
+"
+"" Map leader to ,
+let mapleader=';'
+
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -12,17 +16,9 @@ map tn :tabnext<cr>
 map tp :tabprevious<cr>
 
 map t1 :tabfirst<CR>
-map t2 :tabm 1<CR>
-map t3 :tabm 2<CR>
-map t4 :tabm 3<CR>
-map t5 :tabm 4<CR>
-map t6 :tabm 1<CR>
-map t7 :tabm 1<CR>
-map t8 :tabm 2<CR>
-map t9 :tabm 3<CR>
 map t0 :tablast<CR>
 
-map te :tabedit
+map te :tabedit<cr>
 map tc :tabclose<cr>
 
 " 分割窗口
@@ -32,8 +28,6 @@ map wv :vsplit<cr>
 " 关闭窗口
 map wc :close<cr>
 
-" 切换分割窗口
-map wn <C-w>w
 
 " Wrapped lines goes down/up to next row, rather than next line in file.
 noremap j gj
@@ -55,6 +49,14 @@ nmap <C-a> ggvG$
 
 imap <C-s> <Esc>:wa<cr>i<Right>
 nmap <C-s> :wa<cr>
+imap <leader>w <Esc>:w<cr>
+nmap <leader>w :w<cr>
+
+nmap wqa :wqa<cr>
+
+
+" Quit window on <leader>q
+nnoremap <leader>q :q!<CR>
 
 " Easier horizontal scrolling
 map zl zL
@@ -62,8 +64,8 @@ map zh zH
 
 
 " replace(替换)
-nnoremap <Leader>f :%s//g<left><left>
-vnoremap <Leader>f :s//g<left><left>
+nnoremap <Leader>s :%s//g<left><left>
+vnoremap <Leader>s :s//g<left><left>
 
 
 nnoremap <Leader>t :retab<cr>
@@ -75,19 +77,8 @@ vmap <Leader>g gg=G
 imap <Leader>g gg=G
 
 
-" Quit window on <leader>q
-nnoremap <leader>q :q!<CR>
-
-"快速打开.vimrc、html.snippets、css.snippets、scss.snippets、javascript.snippets、markdown.snippets、、
-map <silent><leader>1 :e ~/.vimrc.local<cr>
-map <silent><leader>2 :e ~/.vimrc.local.bundles<cr>
-
-
 " keyboard shortcuts
 imap <Leader>e <ESC>
 nmap <Leader>e <ESC>
 vmap <Leader>e <ESC>
 cmap <Leader>e <ESC>
-
-nnoremap <Leader>` :cd ~/vhost/<right>
-vnoremap <Leader>` :cd ~/vhost/<right>

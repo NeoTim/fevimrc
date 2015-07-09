@@ -1,25 +1,14 @@
-" vim-airline
+"=====================================================
+" 插件设置
+"=====================================================
+
+""" vim-airline
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 
 
-"*****************************************************************************
-"" Abbreviations
-"*****************************************************************************
-"" no one is really happy until you have this shortcuts
-cnoreabbrev W! w!
-cnoreabbrev Q! q!
-cnoreabbrev Qall! qall!
-cnoreabbrev Wq wq
-cnoreabbrev Wa wa
-cnoreabbrev wQ wq
-cnoreabbrev WQ wq
-cnoreabbrev W w
-cnoreabbrev Q q
-cnoreabbrev Qall qall
-
-"" NERDTree configuration
+""" NERDTree configuration
 let g:NERDTreeChDirMode=2
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
@@ -29,22 +18,10 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 20
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
-noremap <F3> :NERDTreeToggle<CR>
+noremap nt :NERDTreeToggle<CR>
 
 
-" vimshell.vim
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_prompt =  '$ '
-
-" terminal emulation
-if g:vim_bootstrap_editor == 'nvim'
-  nnoremap <silent> <leader>sh :terminal<CR>
-else
-  nnoremap <silent> <leader>sh :VimShellCreate<CR>
-endif
-
-
-"" Git
+""" Git
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Gcommit<CR>
 noremap <Leader>gsh :Gpush<CR>
@@ -55,21 +32,7 @@ noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 
 
-" snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsEditSplit="vertical"
-
-" syntastic
-" let g:syntastic_always_populate_loc_list=1
-" let g:syntastic_error_symbol='✗'
-" let g:syntastic_warning_symbol='⚠'
-" let g:syntastic_style_error_symbol = '✗'
-" let g:syntastic_style_warning_symbol = '⚠'
-" let g:syntastic_auto_loc_list=1
-" let g:syntastic_aggregate_errors = 1
-
+""" syntastic
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting=1
 let g:syntastic_always_populate_loc_list = 1
@@ -82,13 +45,7 @@ let g:syntastic_javascript_checkers = ['jscs']
 " let g:syntastic_javascript_checkers = ['jshint']
 
 
-"=====================================================
-" 插件设置
-"=====================================================
-"
-
-
-"--------------ctrlsf--------------
+""" ctrlsf
 nmap     <C-F>f <Plug>CtrlSFPrompt
 vmap     <C-F>f <Plug>CtrlSFVwordPath
 vmap     <C-F>F <Plug>CtrlSFVwordExec
@@ -98,23 +55,21 @@ nnoremap <C-F>o :CtrlSFOpen<CR>
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
-"
 
-"--------------vim-expand-region--------------
+""" vim-expand-region
 vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 
-"--------------undo-tree--------------
+
+""" undo-tree
 nnoremap <F5> :UndotreeToggle<cr>
 
-"--------------auto-pair--------------
-let g:AutoPairsFlyMode = 1 
-let g:AutoPairsShortcutBackInsert = '∫'
 
-"--------------vim-instant-markdown--------------
+""" vim-instant-markdown
 set shell=bash\ -i
 
-"--------------ctrlp.vim--------------
+
+""" ctrlp
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|target|dist)|(\.(swp|ico|git|svn))$'
@@ -126,8 +81,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_open_new_file = 'r'
 
 
-"-----------emmet-------------
-
+""" emmet
 let g:user_emmet_settings = {
 \  'php' : {
 \    'extends' : 'html',
@@ -140,51 +94,51 @@ let g:user_emmet_settings = {
 \    'extends' : 'html',
 \  },
 \}
-
 let g:user_emmet_expandabbr_key = '<c-e>' "设置为ctrl+e展开
 
-" -----------Tagbar -------------
+
+""" Tagbar
 nmap tb :TagbarToggle<CR>
 vmap tb :TagbarToggle<CR>
 
 
-"-------------Projects---------------
-nmap <silent> pr <Plug>ToggleProject
-
-"-----------commentary-----------------
+""" commentary
 nmap cc gcc
 vmap cc gcc
-autocmd FileType php set commentstring=//\ %s
 
-"--------------javascript-libraries-syntax.vim--------------
+
+""" javascript-libraries-syntax.vim
 let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,requirejs'
 
-"--------------csscomb-for-vim--------------
+
+""" csscomb-for-vim
 nmap <Leader>c :CSScomb<cr>
 vmap <Leader>c :CSScomb<cr>
+" Map bc to run CSScomb. bc stands for beautify css
+autocmd FileType css noremap <buffer> <leader>bc :CSScomb<CR>
+" Automatically comb your CSS on save
+autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb<CR>
 
-" -----------JsBeautify -------------
-map <c-f> :call JsBeautify()<cr>
-" or
+
+""" JsBeautify
+map <s-f> :call JsBeautify()<cr>
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-" for html
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-" for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
-"-------------easymotion---------------
+
+""" easymotion
 let g:EasyMotion_leader_key='<Space>'
 
 
-"-------------UltiSnips---------------
+""" UltiSnips
 nmap <Leader>u :UltiSnipsEdit<cr>
 vmap <Leader>u :UltiSnipsEdit<cr>
-if has("mac")
-  let g:UltiSnipsExpandTrigger="∆"
-elseif has("unix")
-  let g:UltiSnipsExpandTrigger="<M-j>"
-endif
-" ----------- neocomplete-------------
+let g:UltiSnipsExpandTrigger="<leader>f"
+let g:UltiSnipsEditSplit="vertical"
+
+
+""" neocomplete
 inoremap <leader><TAB> <C-c>
 
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
