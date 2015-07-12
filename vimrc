@@ -1,43 +1,43 @@
 " Include NeoBundle core
-if filereadable(expand("~/fvim/modules/vimrc.neobundle.core"))
-  source ~/fvim/modules/vimrc.neobundle.core
+if filereadable(expand("~/fevim/modules/vimrc.neobundle.core"))
+  source ~/fevim/modules/vimrc.neobundle.core
 endif
 
 " Include Basic settings
-if filereadable(expand("~/fvim/modules/vimrc.basic"))
-  source ~/fvim/modules/vimrc.basic
+if filereadable(expand("~/fevim/modules/vimrc.basic"))
+  source ~/fevim/modules/vimrc.basic
 endif
 
 " Include Autocmd settings
-if filereadable(expand("~/fvim/modules/vimrc.autocmd"))
-  source ~/fvim/modules/vimrc.autocmd
+if filereadable(expand("~/fevim/modules/vimrc.autocmd"))
+  source ~/fevim/modules/vimrc.autocmd
 endif
 
 " Include GUI settings
-if filereadable(expand("~/fvim/modules/vimrc.gui"))
-  source ~/fvim/modules/vimrc.gui
+if filereadable(expand("~/fevim/modules/vimrc.gui"))
+  source ~/fevim/modules/vimrc.gui
 endif
 
 " Include mapping settings
-if filereadable(expand("~/fvim/modules/vimrc.mapping"))
-  source ~/fvim/modules/vimrc.mapping
+if filereadable(expand("~/fevim/modules/vimrc.mapping"))
+  source ~/fevim/modules/vimrc.mapping
 endif
 
 
 " Include bundles settings
-if filereadable(expand("~/fvim/modules/vimrc.bundles.setting"))
-  source ~/fvim/modules/vimrc.bundles.setting
+if filereadable(expand("~/fevim/modules/vimrc.bundles.setting"))
+  source ~/fevim/modules/vimrc.bundles.setting
 endif
 
 " Include user's local vim config
-if filereadable(expand("~/fvim/customize/vimrc.local"))
-  source ~/fvim/customize/vimrc.local
+if filereadable(expand("~/fevim/customize/vimrc.local"))
+  source ~/fevim/customize/vimrc.local
 endif
 
-if filereadable(expand("~/fvim/customize/vimrc.local.bundles"))
-  source ~/fvim/customize/vimrc.local.bundles
+if filereadable(expand("~/fevim/customize/vimrc.local.bundles"))
+  source ~/fevim/customize/vimrc.local.bundles
 endif
 
-if filereadable(expand("~/fvim/customize/vimrc.local.bundles.setting"))
-  source ~/fvim/customize/vimrc.local.bundles.setting
+if filereadable(expand("~/fevim/customize/vimrc.local.bundles.setting"))
+  source ~/fevim/customize/vimrc.local.bundles.setting
 endif

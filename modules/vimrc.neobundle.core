@@ -27,14 +27,14 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 
 "" Include Basic bundle
-if filereadable(expand("~/fvim/modules/vimrc.bundles"))
-  source ~/fvim/modules/vimrc.bundles
+if filereadable(expand("~/fevim/modules/vimrc.bundles"))
+  source ~/fevim/modules/vimrc.bundles
 endif
 
 
 "" Include user's extra bundle
-if filereadable(expand("~/fvim/vimrc.local.bundles"))
-  source ~/fvim/vimrc.local.bundles
+if filereadable(expand("~/fevim/vimrc.local.bundles"))
+  source ~/fevim/vimrc.local.bundles
 endif
 
 call neobundle#end()
