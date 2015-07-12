@@ -39,7 +39,11 @@ NeoBundle 'vim-scripts/HTML-AutoCloseTag'
 NeoBundle 'csscomb/csscomb-for-vim'
 
 "" JavaScript
-NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'Chiel92/vim-autoformat'
+NeoBundle 'lfilho/cosco.vim'
+NeoBundle 'burnettk/vim-angular'
+NeoBundle 'othree/yajs.vim'
+
 
 "" markdown
 NeoBundle 'suan/vim-instant-markdown'
@@ -59,6 +63,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'dyng/ctrlsf.vim' 
 NeoBundle 'terryma/vim-multiple-cursors' 
 NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'gcmt/wildfire.vim'
 
 
 NeoBundle 'Shougo/vimshell.vim'

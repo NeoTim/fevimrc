@@ -54,7 +54,6 @@ nmap <leader>w :w<cr>
 
 nmap wqa :wqa<cr>
 
-
 " Quit window on <leader>q
 nnoremap <leader>q :q!<CR>
 
@@ -64,21 +63,25 @@ map zh zH
 
 
 " replace(替换)
-nnoremap <Leader>s :%s//g<left><left>
-vnoremap <Leader>s :s//g<left><left>
+nnoremap <leader>s :%s//g<left><left>
+vnoremap <leader>s :s//g<left><left>
 
 
-nnoremap <Leader>t :retab<cr>
-vnoremap <Leader>t :retab<cr>
+nnoremap <leader>t :retab<cr>
+vnoremap <leader>t :retab<cr>
 
 " 格式化代码
-nmap <Leader>g gg=G
-vmap <Leader>g gg=G
-imap <Leader>g gg=G
+nmap <leader>g gg=G
+vmap <leader>g gg=G
+imap <leader>g gg=G
 
 
 " keyboard shortcuts
-imap <Leader>e <ESC>
-nmap <Leader>e <ESC>
-vmap <Leader>e <ESC>
-cmap <Leader>e <ESC>
+imap <leader>e <ESC>
+nmap <leader>e <ESC>
+vmap <leader>e <ESC>
+cmap <leader>e <ESC>
+
+" 跳转
+nmap <s-h> ^
+nmap <s-l> $

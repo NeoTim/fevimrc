@@ -2,6 +2,13 @@
 " 插件设置
 "=====================================================
 
+""" vim-angular
+let g:angular_find_ignore = ['build/', 'node_modules/', 'bower_components/', 'dist/']
+
+
+""" cosco.vim
+autocmd FileType javascript,css nnoremap <silent> <s-f><s-f> :call cosco#commaOrSemiColon()<CR>
+
 """ vim-airline
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
@@ -43,6 +50,8 @@ let g:syntastic_check_on_wq = 0
 " let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_checkers = ['jscs']
 " let g:syntastic_javascript_checkers = ['jshint']
+" let g:syntastic_html_tidy_ignore_errors=[' proprietary attribute \"ng-']
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
 
 
 """ ctrlsf
@@ -120,21 +129,18 @@ autocmd FileType css noremap <buffer> <leader>bc :CSScomb<CR>
 autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb<CR>
 
 
-""" JsBeautify
-map <s-f> :call JsBeautify()<cr>
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+""" vim-autoformat
+map <s-f> :Autoformat<cr>
 
 
 """ easymotion
-let g:EasyMotion_leader_key='<Space>'
+let g:EasyMotion_leader_key='<space>'
 
 
 """ UltiSnips
 nmap <Leader>u :UltiSnipsEdit<cr>
 vmap <Leader>u :UltiSnipsEdit<cr>
-let g:UltiSnipsExpandTrigger="<leader>f"
+let g:UltiSnipsExpandTrigger="<leader>e"
 let g:UltiSnipsEditSplit="vertical"
 
 
