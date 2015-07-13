@@ -5,83 +5,71 @@
 "" Map leader to ,
 let mapleader=';'
 
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+"" window manage
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+
+map ws :split<cr>
+map wv :vsplit<cr>
+map wc :close<cr>
+
 
 " tab navigation"
 map tt :tabnew<cr>
 map tn :tabnext<cr>
 map tp :tabprevious<cr>
 
-map t1 :tabfirst<CR>
-map t0 :tablast<CR>
+map t1 :tabfirst<cr>
+map t0 :tablast<cr>
 
 map te :tabedit<cr>
 map tc :tabclose<cr>
-
-" 分割窗口
-map ws :split<cr>
-map wv :vsplit<cr>
-
-" 关闭窗口
-map wc :close<cr>
 
 
 " Wrapped lines goes down/up to next row, rather than next line in file.
 noremap j gj
 noremap k gk
 
-" 将所选中内容复制到系统
-" 
-map cy "+y
-noremap P P<CR>
+"" edit text
+vmap <c-c> "+y
+vmap <c-x> "yd
+nmap <c-v> "+p
+vmap <c-v> "+p
+nmap <c-a> ggvG$
 
-" 模仿MS Windows中的快捷键
-vmap <C-c> "+y
-vmap <C-x> "yd
-nmap <C-v> "+p
-vmap <C-v> "+p
-nmap <C-a> ggvG$
-
-" 模仿MS Windows中的保存命令: Ctrl+S
-
-imap <C-s> <Esc>:wa<cr>i<Right>
-nmap <C-s> :wa<cr>
-imap <leader>w <Esc>:w<cr>
+imap <c-s> <esc>:wa<cr>i<right>
+nmap <c-s> :wa<cr>
+imap <leader>w <esc>:w<cr>
 nmap <leader>w :w<cr>
-
 nmap wqa :wqa<cr>
-
-" Quit window on <leader>q
-nnoremap <leader>q :q!<CR>
-
-" Easier horizontal scrolling
-map zl zL
-map zh zH
+nnoremap <leader>q :q!<cr>
 
 
-" replace(替换)
+" replace
 nnoremap <leader>s :%s//g<left><left>
-vnoremap <leader>s :s//g<left><left>
-
 
 nnoremap <leader>t :retab<cr>
 vnoremap <leader>t :retab<cr>
 
-" 格式化代码
+" code format
 nmap <leader>g gg=G
 vmap <leader>g gg=G
 imap <leader>g gg=G
 
 
 " keyboard shortcuts
-imap <leader>e <ESC>
-nmap <leader>e <ESC>
-vmap <leader>e <ESC>
-cmap <leader>e <ESC>
+imap <leader>e <esc>
+nmap <leader>e <esc>
+vmap <leader>e <esc>
+cmap <leader>e <esc>
 
-" 跳转
+" fast jump
 nmap <s-h> ^
 nmap <s-l> $
+
+"" cd home
+nnoremap cdh :cd ~/<right>
+
+

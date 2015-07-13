@@ -1,2 +1,2 @@
-nnoremap <Leader>` :cd ~/vhost/<right>
-vnoremap <Leader>` :cd ~/vhost/<right>
+nnoremap cdb :cd ~/bower-npm<right>
+nnoremap cdv :cd ~/vhost/<right>
