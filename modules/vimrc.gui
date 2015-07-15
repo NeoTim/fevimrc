@@ -7,9 +7,10 @@ set number
 
 let no_buffers_menu=1
 if !exists('g:not_finsh_neobundle')
-  colorscheme molokai
+  " colorscheme molokai
   " set background=light
   " colorscheme solarized
+  colorscheme onedark 
 endif
 
 set mousemodel=popup

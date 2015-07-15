@@ -9,6 +9,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'vim-scripts/CSApprox'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'geoffharcourt/one-dark.vim'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'bronson/vim-trailing-whitespace'
 
