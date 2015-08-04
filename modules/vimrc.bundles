@@ -60,20 +60,8 @@ NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'rking/ag.vim' 
-NeoBundle 'dyng/ctrlsf.vim' 
-NeoBundle 'terryma/vim-multiple-cursors' 
+NeoBundle 'rking/ag.vim'
+NeoBundle 'dyng/ctrlsf.vim'
+NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'gcmt/wildfire.vim'
-
-
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-
