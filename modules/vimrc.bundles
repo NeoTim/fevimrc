@@ -45,7 +45,10 @@ NeoBundle 'lfilho/cosco.vim'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'othree/yajs.vim'
 NeoBundle 'ternjs/tern_for_vim'
+NeoBundle 'ternjs/tern_for_vim'
+NeoBundle 'millermedeiros/vim-esformatter'
 " NeoBundle 'jaxbot/semantic-highlight.vim'
+
 
 
 "" markdown
