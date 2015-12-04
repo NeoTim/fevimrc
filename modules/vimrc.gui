@@ -7,22 +7,27 @@ set number
 
 let no_buffers_menu=1
 if !exists('g:not_finsh_neobundle')
-  colorscheme molokai
+  " colorscheme molokai
   " set background=light
   " colorscheme solarized
-  " colorscheme onedark 
+  colorscheme onedark
 endif
+
 
 set mousemodel=popup
 set t_Co=256
 set nocursorline
 set guioptions=egmrti
-set gfn=Monospace\ 10
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+set gfn=Monospace\ 14
+set linespace=2
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
-    set guifont=Menlo:h14
-    set transparency=6
+    " set guifont=Menlo:h15
+    set guifont=Monaco:h14
+    set transparency=0
   endif
 else
   let g:CSApprox_loaded = 1
@@ -58,4 +63,3 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
-

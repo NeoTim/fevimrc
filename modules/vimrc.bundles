@@ -8,8 +8,8 @@ NeoBundle 'tpope/vim-sensible'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'vim-scripts/CSApprox'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'forsigner/one-dark.vim'
 NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'geoffharcourt/one-dark.vim'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'bronson/vim-trailing-whitespace'
 
@@ -44,6 +44,8 @@ NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'lfilho/cosco.vim'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'othree/yajs.vim'
+NeoBundle 'ternjs/tern_for_vim'
+" NeoBundle 'jaxbot/semantic-highlight.vim'
 
 
 "" markdown

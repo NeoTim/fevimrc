@@ -5,9 +5,16 @@
 """ vim-angular
 let g:angular_find_ignore = ['build/', 'node_modules/', 'bower_components/', 'dist/']
 
+""" semantic-highlight.vim
+" autocmd BufWritePre,BufRead *.js :SemanticHighlight
+" let s:semanticGUIColors = ['#1ABC9C', '#61afef', '#c678dd', '#98c379', '#e5c07b', '#d19a66' , '#e06c75', '#56b6c2']
+
 
 """ cosco.vim
 autocmd FileType javascript,css nnoremap <silent> <s-f><s-f> :call cosco#commaOrSemiColon()<CR>
+
+let background_color = "#292c33"
+let normal_font_color = "#ABB2BF"
 
 """ vim-airline
 let g:airline#extensions#syntastic#enabled = 1
