@@ -32,6 +32,7 @@ map tc :tabclose<cr>
 noremap j gj
 noremap k gk
 
+
 "" edit text
 vmap <c-c> "+y
 vmap <c-x> "yd
@@ -58,18 +59,9 @@ nmap <leader>g gg=G
 vmap <leader>g gg=G
 imap <leader>g gg=G
 
-
-" keyboard shortcuts
-imap <leader>e <esc>
-nmap <leader>e <esc>
-vmap <leader>e <esc>
-cmap <leader>e <esc>
-
 " fast jump
 nmap <s-h> ^
 nmap <s-l> $
 
 "" cd home
 nnoremap cdh :cd ~/<right>
-
-
