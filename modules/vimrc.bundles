@@ -20,7 +20,15 @@ NeoBundle 'majutsushi/tagbar'
 
 "" auto complete && Snippets
 NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'Shougo/neocomplete.vim'
+" NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Valloric/YouCompleteMe', {
+     \ 'build'      : {
+        \ 'mac'     : './install.py',
+        \ 'unix'    : './install.py',
+        \ 'windows' : 'install.py',
+        \ 'cygwin'  : './install.py'
+        \ }
+     \ }
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 
