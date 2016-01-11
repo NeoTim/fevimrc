@@ -151,7 +151,7 @@ let g:EasyMotion_leader_key='<space>'
 
 
 """ UltiSnips
-let g:UltiSnipsExpandTrigger="<CR>"
+let g:UltiSnipsExpandTrigger="<leader>e"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 nmap <Leader>u :UltiSnipsEdit<cr>
